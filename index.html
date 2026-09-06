@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-secondary": "#ffffff", "surface-tint": "#76584a", "surface-container": "#f1ede6", "secondary": "#345ab2", "on-primary-fixed-variant": "#5c4034", "inverse-on-surface": "#f4f0e9", "primary-fixed-dim": "#e5beae", "tertiary": "#000000", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#001848", "on-tertiary-fixed": "#2c1600", "on-tertiary-container": "#b5762e", "error-container": "#ffdad6", "primary-container": "#2b160c", "on-primary-container": "#9e7c6e", "primary": "#000000", "surface-bright": "#fdf9f2", "on-error-container": "#93000a", "surface-dim": "#dddad3", "tertiary-fixed-dim": "#ffb86e", "secondary-fixed-dim": "#b2c5ff", "surface": "#fdf9f2", "inverse-surface": "#31302c", "background": "#fdf9f2", "on-secondary-fixed-variant": "#134198", "tertiary-container": "#2c1600", "primary-fixed": "#ffdbcc", "surface-container-highest": "#e6e2db", "on-secondary-container": "#00368a", "surface-container-low": "#f7f3ec", "secondary-fixed": "#dae2ff", "outline-variant": "#d4c3bd", "on-tertiary-fixed-variant": "#693c00", "secondary-container": "#80a3ff", "on-error": "#ffffff", "inverse-primary": "#e5beae", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "tertiary-fixed": "#ffdcbd", "on-background": "#1c1c18", "surface-variant": "#e6e2db", "on-surface-variant": "#504440", "surface-container-high": "#ebe8e1", "on-surface": "#1c1c18", "on-primary-fixed": "#2b160c", "outline": "#82746f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-desktop": "3rem", "space-4xl": "6rem", "space-sm": "0.75rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "space-3xl": "4rem", "space-2xs": "0.25rem", "space-2xl": "3rem" }, "fontFamily": { "headline-md": ["Playfair Display"], "display-hero": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "title-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-badge": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"] }, "fontSize": { "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "title-sm": ["15px", { "lineHeight": "20px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "title-md": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "800" }], "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } }</script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="bg-primary-container text-on-primary-container text-center py-space-2xs px-space-md">
+      <div class="max-w-7xl mx-auto flex items-center justify-center gap-space-xs"><span
+          class="material-symbols-outlined text-[16px] text-secondary-container">local_shipping</span><span
+          class="font-label-badge text-label-badge uppercase tracking-wider text-surface-container-lowest">Bengaluru
+          &amp; Pan-City Delivery • Freshly Made Daily • Zero Refined Sugar</span></div>
+    </div>
+    <div
+      class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm shrink-0"><img alt="logo.png" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1UawQFQXazHepVYHD9f4aFHnQ7rVMhZc0zIbhwPU4KPfG66U9jQckNS2wJwI0AqQX9mxCnDkqMbNlKn3eZj1NysKBuzm7J_x2NaUOFWxGj816BEKe3qaZIwp4FZ3jEUdz0U2YFfN-Y92jefBedvVaBpH7t6dG-HEhWzdyvZlpZcGEIJrEnQua8nP1ocgougoTo2GpNP7xWSlxB_GTzLSKnE1mye_bN5GWHYqeng_VV2ZO8ZiJ8l4hxkMdLabWAKmmbBu2VseAZw2A"><span
+          class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Fluffy Mousse</span></div>
+      <nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low/70 p-space-2xs rounded-full"
+        data-active-classes="bg-surface-container text-on-surface rounded-full shadow-sm"><a aria-current="page"
+          class="px-space-md py-space-xs font-label-md transition-colors bg-surface-container text-on-surface rounded-full shadow-sm"
+          data-path="home" href="#">Our Story</a><a
+          class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="product-range" href="#">Menu by Weight</a><a
+          class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="nutrition-ingredients" href="#">Nutrition &amp; Ingredients</a><a
+          class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="why-fluffy-mousse" href="#">Why Fluffy Mousse</a><a
+          class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="reviews" href="#">Reviews</a><a
+          class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="order-now" href="#">Order Now</a></nav>
+      <div class="flex items-center gap-space-sm shrink-0"><a
+          class="inline-flex items-center gap-space-xs bg-secondary text-on-secondary px-space-md py-space-xs rounded-full font-title-sm text-title-sm hover:bg-on-secondary-fixed-variant transition-colors shadow-sm"
+          data-path="order-now"
+          href="https://wa.me/919611600768?text=Hi%20Fluffy%20Mousse%2C%20I'd%20like%20to%20order%20fresh%20mousse!"><span
+            class="material-symbols-outlined text-[18px]">chat</span><span class="hidden sm:inline">Order on WhatsApp /
+            Direct</span><span class="sm:hidden">Order</span></a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-surface">
+    <div class="flex flex-col w-full">
+      <!-- HERO LUXURY SHOWCASE -->
+      <section
+        class="relative w-full bg-surface-container-low overflow-hidden pt-space-xl pb-space-3xl lg:pt-space-2xl lg:pb-space-4xl">
+        <!-- Atmospheric Ambient Blooms -->
+        <div
+          class="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none">
+        </div>
+        <div
+          class="absolute bottom-0 right-0 w-[30rem] h-[30rem] rounded-full bg-primary-fixed/20 blur-3xl pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop relative z-10">
+          <!-- Vintage Pill Seal -->
+          <div class="flex items-center justify-center lg:justify-start gap-space-xs mb-space-md">
+            <span
+              class="inline-flex items-center gap-space-2xs px-space-md py-space-2xs rounded-full bg-surface-container-lowest shadow-sm text-secondary font-label-badge text-label-badge uppercase tracking-widest">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              Artisanal Protein Confectionery • Bengaluru
+            </span>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-space-2xl items-center">
+            <!-- Hero Editorial Copy -->
+            <div class="lg:col-span-6 flex flex-col text-center lg:text-left">
+              <div class="flex items-center justify-center lg:justify-start gap-space-2xs text-secondary mb-space-xs">
+                <span class="material-symbols-outlined text-[18px]">favorite</span>
+                <span class="font-headline-sm text-headline-sm italic text-secondary">Healthy • Tasty • Delicious</span>
+                <span class="material-symbols-outlined text-[18px]">favorite</span>
+              </div>
+              <h1 class="font-display-hero text-display-hero text-on-surface tracking-tight mb-space-md">
+                Rich. Creamy. <br class="hidden sm:inline">
+                <span class="text-primary-container italic font-serif">Irresistible.</span><br>
+                Indulge in every spoonful.
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mb-space-lg max-w-xl mx-auto lg:mx-0">
+                Egg Chocolate Protein Mousse — whipped with Saudi dates, Belgian single-origin dark cocoa, and rich
+                bio-available protein. Zero refined sugar, zero preservatives. Treat yourself to a dessert that loves
+                you back.
+              </p>
+              <!-- Key Hallmark Badges -->
+              <div
+                class="grid grid-cols-3 gap-space-sm mb-space-xl p-space-sm bg-surface-container rounded-xl shadow-sm text-center">
+                <div class="flex flex-col items-center">
+                  <span class="font-title-lg text-title-lg text-secondary">12g - 54g</span>
+                  <span class="font-label-badge text-label-badge uppercase text-on-surface-variant">Pure Protein</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="font-title-lg text-title-lg text-primary-container">100%</span>
+                  <span class="font-label-badge text-label-badge uppercase text-on-surface-variant">Dates
+                    Sweetened</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="font-title-lg text-title-lg text-secondary">0%</span>
+                  <span class="font-label-badge text-label-badge uppercase text-on-surface-variant">Added Sugar</span>
+                </div>
+              </div>
+              <!-- CTAs -->
+              <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-space-md">
+                <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-secondary text-on-secondary px-space-xl py-space-md rounded-full font-title-sm text-title-sm hover:bg-on-secondary-fixed-variant transition-all shadow-md hover:shadow-lg"
+                  href="#menu-by-weight">
+                  <span class="">Explore Menu by Weight</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+                <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-surface-container-lowest text-on-surface px-space-lg py-space-md rounded-full font-title-sm text-title-sm shadow-sm hover:bg-surface-container transition-colors"
+                  href="#quick-order">
+                  <span class="material-symbols-outlined text-secondary text-[20px]">chat</span>
+                  <span class="">Order Fresh Batch</span>
+                </a>
+              </div>
+            </div>
+            <!-- Hero Visual Spotlight -->
+            <div class="lg:col-span-6 relative flex justify-center">
+              <!-- Central Hero Card -->
+              <div
+                class="relative w-full max-w-xl bg-surface-container-lowest rounded-3xl shadow-2xl p-space-sm sm:p-space-md overflow-hidden border border-outline-variant/30 group">
+                <div
+                  class="relative rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[16/10] bg-surface-container-high flex items-center justify-center">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1WNeBFV6Dh8TDqPfsSDxpq_W3uxSVMj92N8TWBLXtg2RgUtnSUyR9Zy6iKJXFeh5WPrdwMfKJ5j571MlkPadEVv4A2MqOvURy5fcWwDNGC3PNJ4TDmKrmNuW7WA9GN7RvIdxGNgDxxvi2vQmpvZAb5RhNofHqUFAcJOgFN2rSG1f3CpDladM2gMnLxD_lBg2SJ6z0xqGt5PYAVrGWNzP9cUuMpJVFahHzX2FymLIJTHqW7cA003-ZsnM4w"
+                    alt="Fluffy Mousse Complete Range - 100g, 200g Bestseller and 450g Family Sharing Tubs"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div
+                    class="absolute top-space-sm left-space-sm bg-surface-container-lowest/95 backdrop-blur-md px-space-sm py-space-2xs rounded-full shadow-sm flex items-center gap-space-2xs text-secondary">
+                    <span class="material-symbols-outlined text-[16px]">workspace_premium</span><span
+                      class="font-label-badge text-label-badge uppercase tracking-wider">Full Protein Range •
+                      Koramangala</span></div>
+                  <div
+                    class="absolute bottom-space-sm right-space-sm bg-secondary text-on-secondary px-space-md py-space-2xs rounded-full shadow-md font-label-badge text-label-badge uppercase tracking-wider">
+                    100g • 200g • 450g</div>
+                </div>
+                <div class="mt-space-md pt-space-xs grid grid-cols-4 gap-space-2xs text-center">
+                  <div class="flex flex-col items-center"><span
+                      class="material-symbols-outlined text-secondary text-[22px]">fitness_center</span><span
+                      class="font-label-badge text-label-badge text-on-surface-variant mt-space-2xs">12g - 54g
+                      Protein</span></div>
+                  <div class="flex flex-col items-center"><span
+                      class="material-symbols-outlined text-primary-container text-[22px]">nest_eco_leaf</span><span
+                      class="font-label-badge text-label-badge text-on-surface-variant mt-space-2xs">Whole Dates</span>
+                  </div>
+                  <div class="flex flex-col items-center"><span
+                      class="material-symbols-outlined text-secondary text-[22px]">block</span><span
+                      class="font-label-badge text-label-badge text-on-surface-variant mt-space-2xs">0% Added
+                      Sugar</span></div>
+                  <div class="flex flex-col items-center"><span
+                      class="material-symbols-outlined text-primary-container text-[22px]">favorite</span><span
+                      class="font-label-badge text-label-badge text-on-surface-variant mt-space-2xs">Fresh Daily</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HIGHLIGHT RIBBON TICKER -->
+      <section class="w-full bg-secondary text-on-secondary py-space-sm shadow-inner overflow-hidden">
+        <div class="flex items-center justify-around gap-space-lg whitespace-nowrap overflow-x-auto px-space-md">
+          <div class="flex items-center gap-space-xs font-label-badge text-label-badge uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+            <span class="">Pure Whole Egg Whites</span>
+          </div>
+          <span class="text-secondary-fixed-dim font-serif">•</span>
+          <div class="flex items-center gap-space-xs font-label-badge text-label-badge uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[18px]">restaurant</span>
+            <span class="">Velvety Greek Curd</span>
+          </div>
+          <span class="text-secondary-fixed-dim font-serif">•</span>
+          <div class="flex items-center gap-space-xs font-label-badge text-label-badge uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[18px]">spa</span>
+            <span class="">Saudi Dates Sweetened</span>
+          </div>
+          <span class="text-secondary-fixed-dim font-serif">•</span>
+          <div class="flex items-center gap-space-xs font-label-badge text-label-badge uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[18px]">cookie</span>
+            <span class="">70% Single Origin Cocoa</span>
+          </div>
+        </div>
+      </section>
+      <!-- MENU BY WEIGHT: CORE SHOWCASE SECTION -->
+      <section class="w-full py-space-3xl lg:py-space-4xl bg-surface" id="menu-by-weight">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+          <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-2xl">
+            <div
+              class="inline-flex items-center gap-space-2xs px-space-md py-space-2xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider mb-space-xs">
+              Handcrafted Daily Variations
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface">Menu by Exact Weight</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+              Whether you need a quick post-workout refuel, an evening artisan dessert, or a family celebratory sharing
+              tub — select your calibrated macro tub below.
+            </p>
+          </div>
+          <!-- 3 Products Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-xl items-stretch">
+            <!-- ITEM 1: 100g CUP -->
+            <div
+              class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              <!-- Card Header & Image -->
+              <div class="relative bg-surface-container-low aspect-[4/3] overflow-hidden">
+                <img alt="Fluffy Mousse 100g Cup Daily Guilt-Free Treat"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSHPcO4LPZzFM3giurLltOob-ghRNbvgnx2NiPG5vnYEYdQKMBdtCSqPNA7-pU8K0IZ7JdUVgSO_Nd_9W6DZkRvy_I0WnzW42i2q_qWeRHMvBdCUnyXUqY1BdpkN_mL2MCE-_ZgOJjKJHv7h76ogCaFCV_27-u876qERyvk6vLRC44AiVUzlDc-QYxLd8_mPyJziV3SWqBrmSBDS-ovk551tJp6KLFDTZjl_CjWH8EkxfsqaxyL2Yj6ZQp4b5S8NRN4g">
+                <div
+                  class="absolute top-space-sm left-space-sm bg-surface-container-lowest/90 backdrop-blur-md text-on-surface px-space-sm py-space-2xs rounded-full shadow-sm font-label-badge text-label-badge uppercase">
+                  100g Individual
+                </div>
+                <div
+                  class="absolute top-space-sm right-space-sm bg-secondary text-on-secondary font-label-badge text-label-badge uppercase px-space-sm py-space-2xs rounded-full shadow-sm">
+                  12g Protein
+                </div>
+              </div>
+              <!-- Body Content -->
+              <div class="p-space-lg flex flex-col flex-1">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-badge text-label-badge uppercase tracking-widest text-secondary">Single
+                    Serving</span>
+                  <span class="font-headline-md text-headline-md text-on-surface">₹149</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">The Daily Guilt-Free Treat
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Perfect post-workout hit or 4 PM sweet craving. Light, velvety, and naturally sweetened with whole
+                  dates.
+                </p>
+                <!-- Key Feature List -->
+                <div class="space-y-space-xs mb-space-lg bg-surface-container-low p-space-sm rounded-xl">
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class=""><strong>12g</strong> Bio-available Protein</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class="">Saudi Dates Only • Zero Refined Sugar</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class="">Egg whites &amp; high-fat Greek curd</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class="">Zero chemical preservatives</span>
+                  </div>
+                </div>
+                <!-- Add to Cart / Order CTA with Quantity -->
+                <div class="mt-auto pt-space-md flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between gap-space-xs">
+                    <div class="flex items-center bg-surface-container rounded-full px-space-xs py-space-2xs">
+                      <button aria-label="Decrease quantity"
+                        class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors"
+                        onclick="updateQty('qty-100', -1)">
+                        <span class="material-symbols-outlined text-[16px]">remove</span>
+                      </button>
+                      <span class="w-8 text-center font-title-sm text-title-sm text-on-surface" id="qty-100">1</span>
+                      <button aria-label="Increase quantity"
+                        class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors"
+                        onclick="updateQty('qty-100', 1)">
+                        <span class="material-symbols-outlined text-[16px]">add</span>
+                      </button>
+                    </div>
+                    <button
+                      class="flex-1 inline-flex items-center justify-center gap-space-2xs bg-secondary text-on-secondary py-space-xs px-space-md rounded-full font-title-sm text-title-sm hover:bg-on-secondary-fixed-variant transition-colors shadow-sm"
+                      onclick="handleAddToCart('100g Cup', 149, 'qty-100')">
+                      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                      <span class="">Add to Order</span>
+                    </button>
+                  </div>
+                  <span class="text-center font-label-badge text-label-badge text-on-surface-variant">Ready for instant
+                    Bengaluru dispatch</span>
+                </div>
+              </div>
+            </div>
+            <!-- ITEM 2: 200g CUP (SIGNATURE BESTSELLER) -->
+            <div
+              class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden relative group">
+              <!-- Bestseller Ribbon -->
+              <div class="absolute top-0 right-0 z-20">
+                <div
+                  class="bg-primary-container text-surface-bright font-label-badge text-label-badge uppercase tracking-wider py-space-2xs px-space-md rounded-bl-xl shadow-md flex items-center gap-space-2xs">
+                  <span class="material-symbols-outlined text-[14px] text-secondary-container">star</span>
+                  <span class="">Bestseller</span>
+                </div>
+              </div>
+              <!-- Card Image -->
+              <div class="relative bg-surface-container-low aspect-[4/3] overflow-hidden">
+                <img alt="Fluffy Mousse 200g Cup Signature Indulgence"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXpMCqLJ833M0aLWGbfTLd1L2rWIu4CzTTNy1e5PWz97NdczRw-KkXoGFt82jR8BZDXNyRnCzDR5fFFeX06dUCmnutFaQdMvNPPZGzg6yCwH4GVM9-nd0DvLnRej7Ti5cfAXhxGC9Dr34I5SMs1HimA5NSo5H8uO1PAcXiXn3Ddhd8hv0LNpVaBPBzDcMLiphsZGaPH-PPUeFfTkutDPSX63ZCLdfMPFCSY0i_pxhF1mfGogfyAhOxTxnFcD-8Af-Pnw">
+                <div
+                  class="absolute top-space-sm left-space-sm bg-surface-container-lowest/90 backdrop-blur-md text-on-surface px-space-sm py-space-2xs rounded-full shadow-sm font-label-badge text-label-badge uppercase">
+                  200g Signature
+                </div>
+                <div
+                  class="absolute bottom-space-sm left-space-sm bg-secondary text-on-secondary font-label-badge text-label-badge uppercase px-space-sm py-space-2xs rounded-full shadow-sm">
+                  24g Protein
+                </div>
+              </div>
+              <!-- Body Content -->
+              <div class="p-space-lg flex flex-col flex-1">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-badge text-label-badge uppercase tracking-widest text-secondary">The
+                    Connoisseur's Choice</span>
+                  <span class="font-headline-md text-headline-md text-on-surface">₹269</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">The Signature Indulgence</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Our flagship creation. Velvety Parisian texture with rich roasted cocoa dusting. Indulge without an
+                  ounce of compromise.
+                </p>
+                <!-- Key Feature List -->
+                <div class="space-y-space-xs mb-space-lg bg-surface-container-low p-space-sm rounded-xl">
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class=""><strong>24g</strong> Bio-available Muscle Recovery Protein</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class="">Whole Saudi Date Puree • Zero Syrups</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class="">Deep 70% Dark Chocolate Richness</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+                    <span class="">Freshly hand-whipped each dawn in Koramangala</span>
+                  </div>
+                </div>
+                <!-- Add to Cart / Order CTA with Quantity -->
+                <div class="mt-auto pt-space-md flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between gap-space-xs">
+                    <div class="flex items-center bg-surface-container rounded-full px-space-xs py-space-2xs">
+                      <button aria-label="Decrease quantity"
+                        class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors"
+                        onclick="updateQty('qty-200', -1)">
+                        <span class="material-symbols-outlined text-[16px]">remove</span>
+                      </button>
+                      <span class="w-8 text-center font-title-sm text-title-sm text-on-surface" id="qty-200">1</span>
+                      <button aria-label="Increase quantity"
+                        class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors"
+                        onclick="updateQty('qty-200', 1)">
+                        <span class="material-symbols-outlined text-[16px]">add</span>
+                      </button>
+                    </div>
+                    <button
+                      class="flex-1 inline-flex items-center justify-center gap-space-2xs bg-secondary text-on-secondary py-space-xs px-space-md rounded-full font-title-sm text-title-sm hover:bg-on-secondary-fixed-variant transition-colors shadow-sm"
+                      onclick="handleAddToCart('200g Signature Cup', 269, 'qty-200')">
+                      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                      <span class="">Add to Order</span>
+                    </button>
+                  </div>
+                  <span class="text-center font-label-badge text-label-badge text-on-surface-variant">Recommended: 1 Tub
+                    Daily Maintenance</span>
+                </div>
+              </div>
+            </div>
+            <!-- ITEM 3: 450g TUB (SHARING PACK) -->
+            <div
+              class="flex flex-col bg-surface-container-lowest rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              <!-- Card Header & Image -->
+              <div class="relative bg-surface-container-low aspect-[4/3] overflow-hidden">
+                <img alt="Fluffy Mousse 450g Tub Sharing Pack"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb_SIfGZcycZvPU0-112qdd_2_7Fxu7nM4yUaTXvYRhCRPFnv0p19nXP4ldTA57Rq0LzVaHKWkaHU3pNCGY_3Qd1duB9gNpu87N6DoBZid089DoB5EVhKHd-9yYawUhH1Zn7KRCzTj5miFC9AfyGFIO4BgQ2AMtBOweIp33kaTQrRb9_Ngd3j1QZPHN8hbj7QYb1RvWhfQw9erX1AJYpodEKgHKWMd-1DKx6zoYdAPYNfzmztIiLZO5VNAQ7EnQkcCow">
+                <div
+                  class="absolute top-space-sm left-space-sm bg-surface-container-lowest/90 backdrop-blur-md text-on-surface px-space-sm py-space-2xs rounded-full shadow-sm font-label-badge text-label-badge uppercase">
+                  450g Sharing Tub
+                </div>
+                <div
+                  class="absolute top-space-sm right-space-sm bg-secondary text-on-secondary font-label-badge text-label-badge uppercase px-space-sm py-space-2xs rounded-full shadow-sm">
+                  54g Protein
+                </div>
+              </div>
+              <!-- Body Content -->
+              <div class="p-space-lg flex flex-col flex-1">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-badge text-label-badge uppercase tracking-widest text-secondary">Family •
+                    Events • Couples</span>
+                  <span class="font-headline-md text-headline-md text-on-surface">₹599</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">The Sharing Pack</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Generous gourmet tub for birthdays, couples, post-workout teams, and weekend dinners. High-volume
+                  clean fuel.
+                </p>
+                <!-- Complete Macro Breakdown Rack -->
+                <div class="mb-space-lg bg-surface-container-low p-space-sm rounded-xl">
+                  <div class="flex items-center justify-between mb-space-2xs pb-space-2xs">
+                    <span class="font-label-badge text-label-badge uppercase text-secondary">Total Tub Energy</span>
+                    <span class="font-label-badge text-label-badge text-on-surface font-semibold">Approx. 1,250
+                      kcal</span>
+                  </div>
+                  <div class="grid grid-cols-3 gap-space-2xs text-center">
+                    <div class="bg-surface-container-lowest p-space-2xs rounded-lg">
+                      <span class="font-title-sm text-title-sm text-secondary block font-bold">54g</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Protein</span>
+                    </div>
+                    <div class="bg-surface-container-lowest p-space-2xs rounded-lg">
+                      <span class="font-title-sm text-title-sm text-on-surface block font-bold">18g</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Healthy Fat</span>
+                    </div>
+                    <div class="bg-surface-container-lowest p-space-2xs rounded-lg">
+                      <span class="font-title-sm text-title-sm text-on-surface block font-bold">20g</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Dietary Fiber</span>
+                    </div>
+                  </div>
+                  <div class="mt-space-xs text-center">
+                    <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+                      100g Natural Carbs • 24g Sugar (100% naturally occurring from whole Saudi dates)
+                    </span>
+                  </div>
+                </div>
+                <!-- Add to Cart / Order CTA with Quantity -->
+                <div class="mt-auto pt-space-md flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between gap-space-xs">
+                    <div class="flex items-center bg-surface-container rounded-full px-space-xs py-space-2xs">
+                      <button aria-label="Decrease quantity"
+                        class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors"
+                        onclick="updateQty('qty-450', -1)">
+                        <span class="material-symbols-outlined text-[16px]">remove</span>
+                      </button>
+                      <span class="w-8 text-center font-title-sm text-title-sm text-on-surface" id="qty-450">1</span>
+                      <button aria-label="Increase quantity"
+                        class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors"
+                        onclick="updateQty('qty-450', 1)">
+                        <span class="material-symbols-outlined text-[16px]">add</span>
+                      </button>
+                    </div>
+                    <button
+                      class="flex-1 inline-flex items-center justify-center gap-space-2xs bg-secondary text-on-secondary py-space-xs px-space-md rounded-full font-title-sm text-title-sm hover:bg-on-secondary-fixed-variant transition-colors shadow-sm"
+                      onclick="handleAddToCart('450g Sharing Tub', 599, 'qty-450')">
+                      <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                      <span class="">Add to Order</span>
+                    </button>
+                  </div>
+                  <span class="text-center font-label-badge text-label-badge text-on-surface-variant">Best value per
+                    gram of protein</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Live Order Cart Summary Notification Bar -->
+          <div
+            class="hidden mt-space-xl p-space-md bg-secondary text-on-secondary rounded-2xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-space-md"
+            id="cart-drawer">
+            <div class="flex items-center gap-space-sm">
+              <div class="w-10 h-10 rounded-full bg-on-secondary/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+              </div>
+              <div>
+                <div class="font-title-sm text-title-sm" id="cart-summary-text">Your Artisan Box has items!</div>
+                <div class="font-body-sm text-body-sm text-secondary-fixed-dim" id="cart-summary-subtext">Click below to
+                  finalize direct dispatch via WhatsApp Concierge</div>
+              </div>
+            </div>
+            <a class="inline-flex items-center gap-space-xs bg-surface-container-lowest text-on-surface px-space-lg py-space-xs rounded-full font-title-sm text-title-sm hover:bg-surface-container transition-colors shadow-sm"
+              href="#" id="cart-whatsapp-link" target="_blank">
+              <span class="">Checkout on WhatsApp</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- PILLARS OF PURITY: COMPARISON MATRIX -->
+      <section class="w-full py-space-3xl lg:py-space-4xl bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+          <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+            <span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary">Uncompromising
+              Integrity</span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mt-space-2xs">The Anatomy of Clean Indulgence
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+              Commercial mousse desserts hide behind synthetic emulsifiers, palm oils, and massive glucose dumps. Here
+              is how Fluffy Mousse stands alone.
+            </p>
+          </div>
+          <!-- Side by Side Comparative Cards -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+            <!-- Fluffy Mousse Deck -->
+            <div
+              class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-space-xl shadow-lg relative overflow-hidden">
+              <div
+                class="absolute top-0 right-0 bg-secondary text-on-secondary px-space-md py-space-2xs rounded-bl-xl font-label-badge text-label-badge uppercase tracking-widest">
+                Fluffy Mousse Formulation
+              </div>
+              <div class="flex items-center gap-space-sm mb-space-lg">
+                <span
+                  class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                  <span class="material-symbols-outlined text-[28px]">star</span>
+                </span>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">5 Pure Ingredients Deck</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Real nourishment, artisan confectionery
+                    craft</p>
+                </div>
+              </div>
+              <div class="space-y-space-md">
+                <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+                  <span class="material-symbols-outlined text-secondary text-[24px] mt-space-2xs">egg</span>
+                  <div>
+                    <span class="font-title-sm text-title-sm text-on-surface block">Farm Fresh Pasteurized Egg
+                      Whites</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">100% bio-available protein
+                      delivering the signature whipped cloud texture.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+                  <span class="material-symbols-outlined text-secondary text-[24px] mt-space-2xs">restaurant</span>
+                  <div>
+                    <span class="font-title-sm text-title-sm text-on-surface block">Strained High-Fat Greek
+                      Yogurt</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Slow-churned dairy that provides
+                      creamy body, active probiotics, and long-lasting satiety.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+                  <span class="material-symbols-outlined text-secondary text-[24px] mt-space-2xs">spa</span>
+                  <div>
+                    <span class="font-title-sm text-title-sm text-on-surface block">Whole Saudi Medjool Date
+                      Puree</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Zero white sugar, maltitol,
+                      erythritol, or synthetic syrups. Sweetness tied with wholesome fiber.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+                  <span class="material-symbols-outlined text-secondary text-[24px] mt-space-2xs">cookie</span>
+                  <div>
+                    <span class="font-title-sm text-title-sm text-on-surface block">70% Callebaut Dark Cocolate</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Rich in heart-healthy polyphenols
+                      and antioxidants. Genuine dark cocoa bitterness balanced naturally.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Commercial Comparison Card -->
+            <div
+              class="lg:col-span-5 bg-surface-container rounded-2xl p-space-xl shadow-sm text-on-surface flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-space-xs text-error mb-space-md">
+                  <span class="material-symbols-outlined text-[24px]">cancel</span>
+                  <span class="font-label-badge text-label-badge uppercase tracking-wider">Standard Commercial Pudding /
+                    Mousse</span>
+                </div>
+                <h4 class="font-title-lg text-title-lg text-on-surface mb-space-sm">What you'll NEVER find inside</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+                  Most supermarket brands inflate volume through cheap vegetable shortening and synthetic bulking
+                  agents.
+                </p>
+                <div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+                  <div class="flex items-center gap-space-xs line-through text-on-surface-variant/80">
+                    <span class="material-symbols-outlined text-[18px] text-error">close</span>
+                    <span class="">Refined High-Fructose Corn Syrup &amp; Cane Sugar</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs line-through text-on-surface-variant/80">
+                    <span class="material-symbols-outlined text-[18px] text-error">close</span>
+                    <span class="">Hydrogenated Palm Kernel Oils &amp; Trans Fats</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs line-through text-on-surface-variant/80">
+                    <span class="material-symbols-outlined text-[18px] text-error">close</span>
+                    <span class="">Artificial Chocolate Flavors &amp; Caramel Color 150d</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs line-through text-on-surface-variant/80">
+                    <span class="material-symbols-outlined text-[18px] text-error">close</span>
+                    <span class="">Chemical Shelf Preservatives (Sodium Benzoate / INS 211)</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs line-through text-on-surface-variant/80">
+                    <span class="material-symbols-outlined text-[18px] text-error">close</span>
+                    <span class="">Zero Bio-available Protein (&lt; 2g per serving)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-space-xl p-space-md bg-surface-container-highest rounded-xl text-center">
+                <span class="font-title-sm text-title-sm text-on-surface block">Tested &amp; FSSAI Compliant</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Batch-tested laboratory nutrition
+                  profile</span>
+              </div>
+            </div>
+          </div>
+          <!-- TARGET LIFESTYLE CARDS ("PERFECT FOR") -->
+          <div class="mt-space-3xl">
+            <div class="text-center mb-space-lg">
+              <span class="font-headline-sm text-headline-sm italic text-secondary">Crafted for Every Passion</span>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+              <div
+                class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">fitness_center</span>
+                </div>
+                <span class="font-title-sm text-title-sm text-on-surface">Fitness Enthusiasts</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">High biological value
+                  protein for muscle rebuild after intense training.</span>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">work</span>
+                </div>
+                <span class="font-title-sm text-title-sm text-on-surface">Busy Professionals</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">A convenient afternoon
+                  pick-me-up that avoids afternoon insulin crashes.</span>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">favorite</span>
+                </div>
+                <span class="font-title-sm text-title-sm text-on-surface">Health Conscious</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Date-sweetened whole
+                  ingredients that seamlessly align with low-sugar lifestyles.</span>
+              </div>
+              <div
+                class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm text-center flex flex-col items-center hover:-translate-y-1 transition-transform">
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">sentiment_very_satisfied</span>
+                </div>
+                <span class="font-title-sm text-title-sm text-on-surface">Anyone who Loves Dessert</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Gourmet chocolate decadence
+                  so authentic, you will forget it is healthy.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- STORAGE, FRESHNESS & DIRECT ORDER DISPATCH -->
+      <section class="w-full py-space-3xl lg:py-space-4xl bg-surface" id="quick-order">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+          <div
+            class="bg-primary-container text-surface-bright rounded-3xl p-space-xl lg:p-space-3xl shadow-2xl relative overflow-hidden">
+            <!-- Subtle Glow Background -->
+            <div
+              class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-secondary-fixed/10 blur-2xl pointer-events-none">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+              <div class="lg:col-span-7 flex flex-col">
+                <div class="flex items-center gap-space-2xs text-secondary-container mb-space-xs">
+                  <span class="material-symbols-outlined text-[20px]">ac_unit</span>
+                  <span class="font-label-badge text-label-badge uppercase tracking-wider">Cold Storage Protocol</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-surface-bright mb-space-sm">
+                  Keep Refrigerated (0-4°C) • Do Not Freeze
+                </h2>
+                <p class="font-body-md text-body-md text-surface-variant/90 max-w-xl mb-space-lg">
+                  Because Fluffy Mousse contains strictly zero chemical stabilizers or artificial preservatives, our
+                  mousse must be enjoyed chilled straight from your refrigerator. Shelf life: 4 days refrigerated at
+                  cold peak.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-xl">
+                  <div class="flex items-center gap-space-sm bg-surface-container-highest/10 p-space-sm rounded-xl">
+                    <span class="material-symbols-outlined text-secondary-container text-[28px]">moped</span>
+                    <div>
+                      <span class="font-title-sm text-title-sm text-surface-bright block">Express Insulated
+                        Dispatch</span>
+                      <span class="font-body-sm text-body-sm text-surface-variant/80">Koramangala, Indiranagar, HSR,
+                        Whitefield &amp; beyond</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-space-sm bg-surface-container-highest/10 p-space-sm rounded-xl">
+                    <span class="material-symbols-outlined text-secondary-container text-[28px]">schedule</span>
+                    <div>
+                      <span class="font-title-sm text-title-sm text-surface-bright block">Made Fresh Every
+                        Morning</span>
+                      <span class="font-body-sm text-body-sm text-surface-variant/80">Dispatched in dedicated cold
+                        bags</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fast WhatsApp Ordering Strip -->
+                <div class="flex flex-col gap-space-md pt-space-xs">
+                  <div class="flex flex-wrap items-center gap-space-sm"><a
+                      class="inline-flex items-center justify-center gap-space-xs bg-secondary text-on-secondary px-space-xl py-space-md rounded-full font-title-sm text-title-sm hover:bg-on-secondary-fixed-variant transition-all shadow-md"
+                      href="https://wa.me/919611600768?text=Hi%20Fluffy%20Mousse%2C%20I%20would%20like%20to%20place%20an%20order!"
+                      target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span><span
+                        class="">WhatsApp: +91 96116 00768</span></a><a
+                      class="inline-flex items-center justify-center gap-space-xs bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-surface-bright px-space-lg py-space-md rounded-full font-title-sm text-title-sm transition-all shadow-sm"
+                      href="tel:+919611600768"><span class="material-symbols-outlined text-[20px]">call</span><span
+                        class="">Call Kitchen Concierge</span></a></div>
+                  <div
+                    class="flex flex-wrap items-center gap-space-md font-body-sm text-body-sm text-surface-variant/80">
+                    <a class="flex items-center gap-space-2xs hover:text-surface-bright transition-colors"
+                      href="mailto:fluffymousse.in@gmail.com"><span
+                        class="material-symbols-outlined text-[18px] text-secondary-container">mail</span><span
+                        class="">fluffymousse.in@gmail.com</span></a><span
+                      class="text-surface-variant/40 hidden sm:inline">•</span><a
+                      class="flex items-center gap-space-2xs hover:text-surface-bright transition-colors"
+                      href="https://instagram.com/fluffy_mousse" target="_blank"><span
+                        class="material-symbols-outlined text-[18px] text-secondary-container">photo_camera</span><span
+                        class="">@fluffy_mousse</span></a><span
+                      class="text-surface-variant/40 hidden sm:inline">•</span><span
+                      class="text-surface-variant/70">Instant 5-min batch response</span></div>
+                </div>
+              </div>
+              <!-- Quick Order Direct Form Helper -->
+              <div class="lg:col-span-5 bg-surface-container-lowest text-on-surface rounded-2xl p-space-lg shadow-xl">
+                <h3 class="font-title-lg text-title-lg text-on-surface mb-space-2xs">Quick Dispatch Inquiry</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Have questions about corporate catering boxes, gyms, or party tubs? Drop your contact below.
+                </p>
+                <form class="space-y-space-sm" onsubmit="handleInquirySubmit(event)">
+                  <div>
+                    <label class="block font-label-badge text-label-badge uppercase text-on-surface mb-space-2xs">Your
+                      Name</label>
+                    <input
+                      class="w-full bg-surface-container-low px-space-md py-space-xs rounded-xl font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-colors"
+                      placeholder="e.g. Rahul Sharma" required="" type="text">
+                  </div>
+                  <div>
+                    <label
+                      class="block font-label-badge text-label-badge uppercase text-on-surface mb-space-2xs">Delivery
+                      Pincode (Bengaluru)</label>
+                    <input
+                      class="w-full bg-surface-container-low px-space-md py-space-xs rounded-xl font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-colors"
+                      placeholder="e.g. 560034" required="" type="text">
+                  </div>
+                  <div>
+                    <label
+                      class="block font-label-badge text-label-badge uppercase text-on-surface mb-space-2xs">Preferred
+                      Pack</label>
+                    <select
+                      class="w-full bg-surface-container-low px-space-md py-space-xs rounded-xl font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-colors">
+                      <option value="100g">100g Daily Guilt-Free Cup (₹149)</option>
+                      <option selected="" value="200g">200g Signature Indulgence Cup (₹269)</option>
+                      <option value="450g">450g Sharing Pack Tub (₹599)</option>
+                      <option value="custom">Party / Corporate Bulk Order (5kg+)</option>
+                    </select>
+                  </div>
+                  <button
+                    class="w-full bg-secondary text-on-secondary py-space-xs rounded-full font-title-sm text-title-sm hover:bg-on-secondary-fixed-variant transition-colors shadow-sm mt-space-md flex items-center justify-center gap-space-2xs"
+                    type="submit">
+                    <span class="">Check Fresh Availability</span>
+                    <span class="material-symbols-outlined text-[18px]">send</span>
+                  </button>
+                </form>
+                <div class="hidden mt-space-sm text-center font-body-sm text-body-sm text-secondary font-semibold"
+                  id="inquiry-status">
+                  Thank you! Our kitchen team is verifying today's batch availability.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CUSTOMER LOVE & TESTIMONIAL TICKER -->
+      <section class="w-full py-space-2xl bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop">
+          <div class="text-center mb-space-xl">
+            <div class="flex items-center justify-center gap-space-2xs text-secondary mb-space-2xs">
+              <span class="material-symbols-outlined text-[20px]">star</span>
+              <span class="material-symbols-outlined text-[20px]">star</span>
+              <span class="material-symbols-outlined text-[20px]">star</span>
+              <span class="material-symbols-outlined text-[20px]">star</span>
+              <span class="material-symbols-outlined text-[20px]">star</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface">Indulgers in Love with Fluffy Mousse</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+            <!-- Review 1 -->
+            <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+              <p class="font-body-md text-body-md text-on-surface mb-space-md italic">
+                "Finally an Indian brand that takes protein confectionery seriously! The texture is feather-light and
+                you genuinely cannot taste any egg white aftertaste. Pure dark chocolate bliss."
+              </p>
+              <div class="flex items-center gap-space-sm pt-space-xs">
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-title-sm font-bold">
+                  VK
+                </div>
+                <div>
+                  <span class="font-title-sm text-title-sm text-on-surface block">Vikram K.</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">CrossFit Coach • Indiranagar</span>
+                </div>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+              <p class="font-body-md text-body-md text-on-surface mb-space-md italic">
+                "I ordered the 450g tub for my anniversary dinner. My partner is diabetic and strictly avoids refined
+                sugar. We finished the entire tub guilt-free knowing it's whole Saudi dates and Greek yogurt."
+              </p>
+              <div class="flex items-center gap-space-sm pt-space-xs">
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-title-sm font-bold">
+                  SM
+                </div>
+                <div>
+                  <span class="font-title-sm text-title-sm text-on-surface block">Shreya M.</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Product Designer • Koramangala</span>
+                </div>
+              </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+              <p class="font-body-md text-body-md text-on-surface mb-space-md italic">
+                "The 100g cups are a staple in my office fridge. With 12g protein and rich dark cocoa dusting, my sweet
+                tooth is silenced without having a glucose spike and crash at 4 PM."
+              </p>
+              <div class="flex items-center gap-space-sm pt-space-xs">
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-title-sm font-bold">
+                  AN
+                </div>
+                <div>
+                  <span class="font-title-sm text-title-sm text-on-surface block">Arjun N.</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Fintech Lead • HSR Layout</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SCRIPT FOR CART INTERACTIONS -->
+      <script>
+        const cart = {
+          items: {}
+        };
+
+        function updateQty(id, delta) {
+          const el = document.getElementById(id);
+          if (!el) return;
+          let val = parseInt(el.innerText, 10) || 1;
+          val = Math.max(1, Math.min(20, val + delta));
+          el.innerText = val;
+        }
+
+        function handleAddToCart(name, price, qtyId) {
+          const qtyEl = document.getElementById(qtyId);
+          const qty = parseInt(qtyEl ? qtyEl.innerText : '1', 10);
+
+          if (!cart.items[name]) {
+            cart.items[name] = { price: price, qty: 0 };
+          }
+          cart.items[name].qty += qty;
+
+          // Update UI Drawer
+          const drawer = document.getElementById('cart-drawer');
+          const summaryText = document.getElementById('cart-summary-text');
+          const summarySub = document.getElementById('cart-summary-subtext');
+          const waLink = document.getElementById('cart-whatsapp-link');
+
+          let totalItems = 0;
+          let totalPrice = 0;
+          let itemsListStr = [];
+
+          for (const [itemName, data] of Object.entries(cart.items)) {
+            totalItems += data.qty;
+            totalPrice += (data.qty * data.price);
+            itemsListStr.push(`${data.qty}x ${itemName} (₹${data.qty * data.price})`);
+          }
+
+          summaryText.innerText = `Artisan Order: ${totalItems} Pack(s) Added • Total ₹${totalPrice}`;
+          summarySub.innerText = `Selections: ${itemsListStr.join(', ')}`;
+
+          const whatsappMsg = encodeURIComponent(`Hi Fluffy Mousse! I would like to place an order from your website:\n\n${itemsListStr.join('\n')}\n\nTotal Estimated: ₹${totalPrice}\nPlease confirm delivery time for Bengaluru.`);
+          waLink.href = `https://wa.me/?text=${whatsappMsg}`;
+
+          drawer.classList.remove('hidden');
+          drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function handleInquirySubmit(e) {
+          e.preventDefault();
+          const status = document.getElementById('inquiry-status');
+          if (status) {
+            status.classList.remove('hidden');
+            setTimeout(() => {
+              status.classList.add('hidden');
+              e.target.reset();
+            }, 4000);
+          }
+        }
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-low text-on-surface">
+    <div class="bg-surface-container py-space-xl">
+      <div
+        class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-space-lg text-center">
+        <div class="flex flex-col items-center gap-space-2xs"><span
+            class="material-symbols-outlined text-secondary text-[28px]">verified</span><span
+            class="font-title-sm text-title-sm text-on-surface">Artisanal Guarantee</span><span
+            class="font-body-sm text-body-sm text-on-surface-variant">Small batch crafted every morning</span></div>
+        <div class="flex flex-col items-center gap-space-2xs"><span
+            class="material-symbols-outlined text-secondary text-[28px]">nutrition</span><span
+            class="font-title-sm text-title-sm text-on-surface">Whole Medjool Dates</span><span
+            class="font-body-sm text-body-sm text-on-surface-variant">Zero refined sugar or artificial syrups</span>
+        </div>
+        <div class="flex flex-col items-center gap-space-2xs"><span
+            class="material-symbols-outlined text-secondary text-[28px]">fitness_center</span><span
+            class="font-title-sm text-title-sm text-on-surface">12g-18g Pure Protein</span><span
+            class="font-body-sm text-body-sm text-on-surface-variant">Greek yogurt &amp; fresh pasteurized egg
+            whites</span></div>
+        <div class="flex flex-col items-center gap-space-2xs"><span
+            class="material-symbols-outlined text-secondary text-[28px]">cookie</span><span
+            class="font-title-sm text-title-sm text-on-surface">70% Single Origin Cocoa</span><span
+            class="font-body-sm text-body-sm text-on-surface-variant">Velvety, indulgent dark chocolate notes</span>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-3xl">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl">
+        <div class="md:col-span-5 flex flex-col gap-space-md">
+          <div class="flex items-center gap-space-sm"><span
+              class="font-headline-md text-headline-md text-on-surface">Fluffy Mousse</span><span
+              class="font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed px-space-xs py-space-2xs rounded-full uppercase">Boutique
+              Nutrition</span></div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">High protein confectionery bridging pure
+            athletic nutrition with Parisian dessert decadence. Whipped fresh in Bengaluru daily.</p>
+          <div class="flex items-center gap-space-xs text-on-surface-variant"><span
+              class="material-symbols-outlined text-[20px] text-secondary">location_on</span><span
+              class="font-body-sm text-body-sm">Bengaluru, Karnataka 560034</span></div>
+        </div>
+        <div class="md:col-span-3 flex flex-col gap-space-sm"><span
+            class="font-title-sm text-title-sm uppercase tracking-wider text-on-surface">Ingredient Deck</span>
+          <div class="flex flex-col gap-space-2xs"><span class="font-body-sm text-body-sm text-on-surface-variant">•
+              Fresh High-Fat Greek Curd</span><span class="font-body-sm text-body-sm text-on-surface-variant">• Pure
+              Saudi Date Puree</span><span class="font-body-sm text-body-sm text-on-surface-variant">• Callebaut 70.5%
+              Couverture</span><span class="font-body-sm text-body-sm text-on-surface-variant">• Farm Fresh Whipped Egg
+              White</span><span class="font-body-sm text-body-sm text-on-surface-variant">• Madagascar Bourbon
+              Vanilla</span></div>
+        </div>
+        <div class="md:col-span-4 flex flex-col gap-space-sm"><span
+            class="font-title-sm text-title-sm uppercase tracking-wider text-on-surface">Direct Concierge &amp;
+            Orders</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Orders, event catering cups, and corporate
+            wellness boxes delivered across Bangalore via temperature-controlled express.</p>
+          <div class="flex flex-col gap-space-xs mt-space-2xs"><a
+              class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface hover:text-secondary transition-colors"
+              href="https://wa.me/919611600768?text=Hi%20Fluffy%20Mousse%20team%2C%20I'd%20like%20to%20order."
+              target="_blank"><span class="material-symbols-outlined text-[20px] text-secondary">chat</span><span
+                class=""><strong>WhatsApp &amp; Call:</strong> +91 98450 87654</span></a><a
+              class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface hover:text-secondary transition-colors"
+              href="mailto:fluffymousse.in@gmail.com"><span
+                class="material-symbols-outlined text-[20px] text-secondary">mail</span><span
+                class=""><strong>Email:</strong> fluffymousse.in@gmail.com</span></a><a
+              class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface hover:text-secondary transition-colors"
+              href="https://instagram.com/fluffy_mousse" target="_blank"><span
+                class="material-symbols-outlined text-[20px] text-secondary">photo_camera</span><span
+                class=""><strong>Instagram:</strong> @fluffy_mousse</span></a></div>
+          <div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="WhatsApp Fluffy Mousse"
+              class="inline-flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary font-label-md text-label-md transition-all"
+              href="https://wa.me/919611600768" target="_blank"><span
+                class="material-symbols-outlined text-[18px]">chat</span><span class="">WhatsApp</span></a><a
+              aria-label="Email Fluffy Mousse"
+              class="inline-flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary font-label-md text-label-md transition-all"
+              href="mailto:fluffymousse.in@gmail.com"><span
+                class="material-symbols-outlined text-[18px]">mail</span><span class="">Gmail</span></a><a
+              aria-label="Instagram Fluffy Mousse"
+              class="inline-flex items-center gap-space-2xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface hover:bg-secondary hover:text-on-secondary font-label-md text-label-md transition-all"
+              href="https://instagram.com/fluffy_mousse" target="_blank"><span
+                class="material-symbols-outlined text-[18px]">photo_camera</span><span class="">Instagram</span></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-space-2xl pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+        <span class=""><br></span>
+        <div class="flex items-center gap-space-lg"><a class="hover:text-on-surface" href="#"><br></a><a
+            class="hover:text-on-surface" href="#"><br></a><a class="hover:text-on-surface" href="#">Terms &amp; Fresh
+            Delivery Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
